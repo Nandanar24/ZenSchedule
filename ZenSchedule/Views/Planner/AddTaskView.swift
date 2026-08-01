@@ -111,6 +111,7 @@ struct AddTaskView: View {
                             DatePicker(
                                 "Choose date and time",
                                 selection: $selectedDate,
+                                in: Date()...,
                                 displayedComponents: [
                                     .date,
                                     .hourAndMinute

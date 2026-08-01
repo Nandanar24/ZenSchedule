@@ -88,4 +88,5 @@ struct TaskCard: View {
         print("Maths tapped")
     }
     .padding()
+    
 }

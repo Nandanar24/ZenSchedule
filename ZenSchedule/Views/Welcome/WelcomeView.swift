@@ -85,17 +85,22 @@ struct WelcomeView: View {
                     .buttonStyle(.plain)
                     
                     // MARK: Sleep Card
-                    
-                    FeatureCard(
-                        title: "Sleep & Stress",
-                        description: "Track your sleep, stress levels and daily mood.",
-                        icon: "moon.zzz.fill",
-                        color: Color(
-                            red: 0.82,
-                            green: 0.93,
-                            blue: 0.91
+
+                    NavigationLink {
+                        SleepView()
+                    } label: {
+                        FeatureCard(
+                            title: "Sleep & Stress",
+                            description: "Track your sleep, stress levels and daily mood.",
+                            icon: "moon.zzz.fill",
+                            color: Color(
+                                red: 0.82,
+                                green: 0.93,
+                                blue: 0.91
+                            )
                         )
-                    )
+                    }
+                    .buttonStyle(.plain)
                     
                     // MARK: AI Card
                     
@@ -113,32 +118,6 @@ struct WelcomeView: View {
                 .padding(.top, 25)
                 
                 Spacer()
-                
-                // MARK: - Get Started Button
-                
-                Button {
-                    print("Get Started tapped")
-                } label: {
-                    
-                    HStack(spacing: 14) {
-                        Image(systemName: "heart")
-                        
-                        Text("Get Started")
-                    }
-                    .font(.system(size: 22, weight: .bold))
-                    .foregroundColor(.black)
-                    .frame(maxWidth: .infinity)
-                    .padding()
-                    .background(
-                        Color(
-                            red: 0.95,
-                            green: 0.78,
-                            blue: 0.76
-                        )
-                    )
-                    .cornerRadius(28)
-                }
-                .padding(.horizontal, 30)
                 
                 // MARK: - Footer
                 
